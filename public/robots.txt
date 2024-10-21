@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /core/account
+Disallow: /core/thank-you
+Sitemap: https://urbisapp.com/sitemap.xml
