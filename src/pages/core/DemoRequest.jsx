@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { demo_request_URL } from '../../services/configs';
 import PagePaths from '../../PagePaths';
 import { useLang } from '../../contexts/langContext';
-import { makeApiRequest } from '../../services/serverdata';
+import { api } from '../../services/configs';
 import colorMap from '../../utils/ColorPalette'; 
 
  
@@ -70,7 +70,7 @@ const DemoRequestForm = () => {
     setIsSubmitting(true);
     console.log("data: ", formData)
     try {
-      await makeApiRequest(demo_request_URL, 'POST', formData);
+      await api.post(demo_request_URL, formData);
       navigate(PagePaths.thank_you);
     } catch (err) {
       setMessage('Error submitting the form');

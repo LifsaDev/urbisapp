@@ -1,23 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import {Accordion, AccordionSummary, AccordionDetails, Button, Typography,Link, List, ListItem, ListItemText, Divider} from '@mui/material';
+import React from 'react';
+import {Accordion, AccordionSummary, AccordionDetails, Button, Typography,Link, Divider} from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import PersonIcon from '@mui/icons-material/Person';
 import { useNavigate } from 'react-router-dom';
-import { styled } from '@mui/system';
-import { getAccessToken, getUsername } from '../../../pages/auth/secureStorage';
+import { Urbis_App_URL } from '../../../services/configs';
 import PagePaths from '../../../PagePaths';
-import LangSwitcher from '../../LangSwitcher';
 import { useLang } from '../../../contexts/langContext';
 
-const LinkItem = styled(Link)(() => ({
-  color: 'black',
-  textDecoration: 'none',
-  fontSize: '6px',
-  marginBottom: '4px',
-  '&:hover': {
-    color: "#007bff",
-  },
-}));
+
 
  
 
@@ -30,8 +19,9 @@ export default function MobileMenu() {
   };
 
   const handleLogin = () => {
-    navigate(PagePaths.login);
+    window.location.href = `${Urbis_App_URL}account/login`;
   };
+
 
   const features = {
     Communication: [

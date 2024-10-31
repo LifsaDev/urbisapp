@@ -2,7 +2,6 @@ import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
  
 // Utility components
-import PrivateRoute from './PrivateRoutes';
 import PagePaths from './PagePaths';
 import { LangProvider } from './contexts/langContext';
  
@@ -65,19 +64,6 @@ const SolutionsPage = lazy(() => import('./pages/core/AllSolutions'));
 const Privacy = lazy(() => import('./pages/core/Privacy'));
 
 
-// ACCOUNT
-const Login = lazy(() => import('./pages/auth/Login'));
-const SignUp = lazy(() => import('./pages/auth/SingUp'));
-const UserDetails = lazy(() => import('./pages/auth/UserDetails'));
-const UserContacts = lazy(() => import('./pages/auth/UserContacts'));
-const UnitDetails = lazy(() => import('./pages/auth/UnitDetails'));
-const ElectronicConsent = lazy(() => import('./pages/auth/ElectronicConsent'));
-const ProofOfResidence = lazy(() => import('./pages/auth/ProofOfResidence'));
-const PasswordReset = lazy(() => import('./pages/auth/PasswordReset'));
-const PasswordResetConfirm = lazy(() => import('./pages/auth/PasswordConfirm'));
-
-
-
 
 
 function App() {
@@ -89,16 +75,6 @@ function App() {
           <LangProvider>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path={PagePaths.login} element={<Login />} />
-              <Route path={PagePaths.sign_up} element={<SignUp />} />
-              <Route path={PagePaths.password_reset} element={<PasswordReset />} />
-              <Route path={PagePaths.password_reset_confirm} element={<PasswordResetConfirm />} />
-              <Route path={PagePaths.user_details} element={<PrivateRoute element={<UserDetails />} />} />
-              <Route path={PagePaths.user_contacts} element={<PrivateRoute element={<UserContacts />} />} />
-              <Route path={PagePaths.unit_details} element={<PrivateRoute element={<UnitDetails />} />} />
-              <Route path={PagePaths.electronic_singature} element={<PrivateRoute element={<ElectronicConsent />} />} />
-              <Route path={PagePaths.proof_of_residence} element={<PrivateRoute element={<ProofOfResidence />} />} />
-
               <Route path={PagePaths.demo_request} element={<DemoRequestForm />} />
               <Route path={PagePaths.thank_you} element={<ThankYouPage />} />
               <Route path={PagePaths.virtual_meetings} element={<VirtualMeeting />} />

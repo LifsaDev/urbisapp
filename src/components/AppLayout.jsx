@@ -19,6 +19,7 @@ import DesktopMenu from './menu/desktop/DesktopMenu';
 import MobileMenu from './menu/mobile/MobileMenu';
 import PagePaths from '../PagePaths';
 import { useNavigate } from 'react-router-dom';
+import { Urbis_App_URL } from '../services/configs';
  
 
 
@@ -31,6 +32,10 @@ function MainLayout({ children }) {
  
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
+  };
+
+  const handleLogin = () => {
+    window.location.href = `${Urbis_App_URL}account/login`;
   };
 
  
@@ -100,7 +105,7 @@ function MainLayout({ children }) {
           >
            {t.free_demo_btn}
           </Button>
-          <Button onClick={()=>{navigate_to(PagePaths.login)}}  disableElevation sx={{backgroundColor: colorMap.blue, color: '#fff', textTransform: 'capitalize', ':hover': {backgroundColor: colorMap.deepblack, color: colorMap.white}, display: { xs: 'none', md: 'block' } }} variant="outlined" size="small">
+          <Button onClick={handleLogin}  disableElevation sx={{backgroundColor: colorMap.blue, color: '#fff', textTransform: 'capitalize', ':hover': {backgroundColor: colorMap.deepblack, color: colorMap.white}, display: { xs: 'none', md: 'block' } }} variant="outlined" size="small">
             {t.log_in}
           </Button>
         </Toolbar>
