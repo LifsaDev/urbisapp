@@ -277,11 +277,11 @@ const DemoRequestForm = () => {
                 }}
               >
                 <MenuItem value="">{t.select_role}</MenuItem>
-                <MenuItem value="Property Manager">Property Manager</MenuItem>
-                <MenuItem value="Board Manager">Board Manager</MenuItem>
-                <MenuItem value="Security">Security</MenuItem>
-                <MenuItem value="Developer">Developer</MenuItem>
-                <MenuItem value="Resident">Resident</MenuItem>
+                <MenuItem value="PROPERTY_MANAGER">Property Manager</MenuItem>
+                <MenuItem value="BOARD_MANAGER">Board Manager</MenuItem>
+                <MenuItem value="SECURITY">Security</MenuItem>
+                <MenuItem value="DEVELOPER">Developer</MenuItem>
+                <MenuItem value="RESIDENT">Resident</MenuItem>
               </TextField>
 
               {/* Amenities Facilities */}
@@ -348,11 +348,11 @@ const DemoRequestForm = () => {
                 }}
               >
                 <MenuItem value="">{t.select_feature}</MenuItem>
-                <MenuItem value="Amenity Booking & Online Payments">Amenity Booking & Online Payments</MenuItem>
-                <MenuItem value="Package & Parking Management">Package & Parking Management</MenuItem>
-                <MenuItem value="Communication">Communication</MenuItem>
-                <MenuItem value="Maintenance & Service Request">Maintenance & Service Request</MenuItem>
-                <MenuItem value="Document Sharing & Storage">Document Sharing & Storage</MenuItem>
+                <MenuItem value="AMENITY_BOOKING_ONLINE_PAYMENTS">Amenity Booking & Online Payments</MenuItem>
+                <MenuItem value="PACKAGE_PARKING_MANAGEMENT">Package & Parking Management</MenuItem>
+                <MenuItem value="COMMUNICATION">Communication</MenuItem>
+                <MenuItem value="MAINTENANCE_SERVICE_REQUEST">Maintenance & Service Request</MenuItem>
+                <MenuItem value="DOCUMENT_SHARING_STORAGE">Document Sharing & Storage</MenuItem>
               </TextField>
 
               {/* More Description */}

@@ -14,7 +14,7 @@ const api = axios.create({
 });
  
  
-const demo_request_URL = '/DemoRequest/';
+const demo_request_URL = '/demo-requests/';
  
 
 export {
