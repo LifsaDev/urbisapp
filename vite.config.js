@@ -1,14 +1,12 @@
-import { defineConfig, loadEnv } from 'vite'
+import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd(), 'VITE_')
   
   return {
     plugins: [react()],
     define: {
-      'import.meta.env.VITE_API_BASE_URL': JSON.stringify(env.VITE_API_BASE_URL),
-      'import.meta.env.VITE_URBIS_APP_URL': JSON.stringify(env.VITE_URBIS_APP_URL)
-    }
+      'process.env': process.env
+    } 
   }
 })
