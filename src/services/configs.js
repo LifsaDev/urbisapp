@@ -1,7 +1,7 @@
 import axios from 'axios';
  
-const Backend_URL = import.meta.env.VITE_URBIS_API_URL;
-const Urbis_App_URL = import.meta.env.VITE_URBIS_SITE_URL;
+const Backend_URL = "https://urbis-api-fkc7b8atdnhhhhd5.westeurope-01.azurewebsites.net/api/"
+const Urbis_App_URL = "https://www.urbisapp.com/";
  
 const api = axios.create({
   baseURL: Backend_URL,
