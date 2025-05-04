@@ -1,4 +1,3 @@
-import React from 'react';
 import {Accordion, AccordionSummary, AccordionDetails, Button, Typography,Link, Divider} from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useNavigate } from 'react-router-dom';
@@ -77,20 +76,20 @@ export default function MobileMenu() {
     { name: "service_management", link_to: PagePaths.company_management },
   ];
 
-  const learn_data = [
-    { name: "articles", link_to: "" },
-    { name: "case_studies", link_to: "" },
-    { name: "templates", link_to: "" },
-    { name: "webinars", link_to: "" },
-    { name: "savings_calculator", link_to: "" },
-    { name: "technology_score", link_to: "" }
-  ];
+  // const learn_data = [
+  //   { name: "articles", link_to: "" },
+  //   { name: "case_studies", link_to: "" },
+  //   { name: "templates", link_to: "" },
+  //   { name: "webinars", link_to: "" },
+  //   { name: "savings_calculator", link_to: "" },
+  //   { name: "technology_score", link_to: "" }
+  // ];
 
-  const product_help_data = [
-    { name: "help_center", link_to: "" },
-    { name: "community_forum", link_to: "" },
-    { name: "feature_suggestion", link_to: "" },
-  ];
+  // const product_help_data = [
+  //   { name: "help_center", link_to: "" },
+  //   { name: "community_forum", link_to: "" },
+  //   { name: "feature_suggestion", link_to: "" },
+  // ];
 
   const why_us_data = [
     { name: "why_dorsia_management", link_to: PagePaths.why_dorsia_management },
@@ -209,7 +208,7 @@ export default function MobileMenu() {
           </ul>
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      {/* <Accordion>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
           <Typography variant="subtitle1"  sx={{fontWeight: 900, fontSize: '0.9rem', mb: 0}}>{t.resources}</Typography>
         </AccordionSummary>
@@ -247,7 +246,7 @@ export default function MobileMenu() {
             </AccordionDetails>
           </Accordion>
         </AccordionDetails>
-      </Accordion>
+      </Accordion> */}
       <Accordion>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
           <Typography variant="subtitle1"  sx={{fontWeight: 900, fontSize: '0.9rem', mb: 0}}>{t.why_us}</Typography>

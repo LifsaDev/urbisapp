@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Container, Grid2 as Grid, Typography, Divider, IconButton } from '@mui/material';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import ScrollToTop from "react-scroll-to-top";
@@ -77,13 +76,13 @@ const Footer = () => {
             <FooterSectionTitle style={{color: colorMap.turquoiseClair}}  variant="h5">{t.popular_links}</FooterSectionTitle>
             <SectionData>
               <li><a href={PagePaths.all_solution}>{t.features}</a></li>
-              <li><a href="*">{t.articles}</a></li>
+              {/* <li><a href="*">{t.articles}</a></li>
               <li><a href="*">{t.templates}</a></li>
               <li><a href="*">{t.system_status}</a></li>
               <li><a href="*">{t.order_status_certificate}</a></li>
               <li><a href="*">{t.community_forum}</a></li>
               <li><a href="*">{t.sustainability}</a></li>
-              <li><a href="*">{t.disaster_relief}</a></li>
+              <li><a href="*">{t.disaster_relief}</a></li> */}
             </SectionData>
           </Grid>
           <HorizontalSeparator />
@@ -92,10 +91,7 @@ const Footer = () => {
             <SectionData>
               <li><a href={PagePaths.about_us}>{t.our_story}</a></li>
               <li><a href={PagePaths.why_dorsia_management}>{t.why_dorsia_management}</a></li>
-              <li><a href="*">{t.dorsia_management_certified}</a></li>
               <li><a href="*">Site - Casablanca</a></li>
-              <li><a href="*">Site - Rabat</a></li>
-              <li><a href="*">Site - Marrakech</a></li>
               <li><a href="*">FAQ</a></li>
             </SectionData>
           </Grid>

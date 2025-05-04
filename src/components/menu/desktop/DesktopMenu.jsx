@@ -11,7 +11,7 @@ import { useLang } from '../../../contexts/langContext';
 import colorMap from '../../../utils/ColorPalette';
 import SolutionMenuItems from './SolutionMenuItems';
 import ServicesMenuItems from './ServicesMenuItems';
-import ResourcesMenuItems from './ResourcesMenuItems';
+// import ResourcesMenuItems from './ResourcesMenuItems';
 import WhyUsMenuItems from './WhyUs';
 import PagePaths from '../../../PagePaths';
 
@@ -19,7 +19,7 @@ export default function DesktopMenu() {
     const navigate_to = useNavigate();
     const [openSolutionMegaMenu, setOpenSolutionMegaMenu] = React.useState(false);
     const [openServiceMegaMenu, setOpenServiceMegaMenu] = React.useState(false);
-    const [openRessourceMegaMenu, setOpenResourceMegaMenu] = React.useState(false);
+    // const [openRessourceMegaMenu, setOpenResourceMegaMenu] = React.useState(false);
     const [openWhyUsMegaMenu, setOpenWhyUsMegaMenu] = React.useState(false);
     const { translations: t } = useLang();
  
@@ -40,13 +40,13 @@ export default function DesktopMenu() {
         </Grow>
     );
 
-    const ResourcesmegaMenuContent = (
-        <Grow in={openRessourceMegaMenu} style={{ transformOrigin: '0 0 0' }} timeout={500}>
-            <Paper elevation={4} sx={{ position: 'absolute', top: '100%', left: 0, width: '450px', zIndex: 10 }}>
-               <ResourcesMenuItems/>
-            </Paper>
-        </Grow>
-    );
+    // const ResourcesmegaMenuContent = (
+    //     <Grow in={openRessourceMegaMenu} style={{ transformOrigin: '0 0 0' }} timeout={500}>
+    //         <Paper elevation={4} sx={{ position: 'absolute', top: '100%', left: 0, width: '450px', zIndex: 10 }}>
+    //            <ResourcesMenuItems/>
+    //         </Paper>
+    //     </Grow>
+    // );
 
     const WhyUsmegaMenuContent = (
         <Grow in={openWhyUsMegaMenu} style={{ transformOrigin: '0 0 0' }} timeout={500}>
@@ -79,7 +79,7 @@ export default function DesktopMenu() {
                 {t.services}
                 {ServicesmegaMenuContent}
             </Button>
-            <Button 
+            {/* <Button 
                 size="small" 
                 sx={{marginRight: '10px!important', fontSize: '0.9rem', color: colorMap.white, textTransform: 'capitalize' }}
                 onMouseEnter={()=>{setOpenResourceMegaMenu(true)}}
@@ -88,7 +88,7 @@ export default function DesktopMenu() {
             >
                 {ResourcesmegaMenuContent}
                 {t.resources}
-            </Button>
+            </Button> */}
             <Button
               size="small" 
               sx={{display: {xs: 'none', sm: 'none', md: 'none', lg: 'inline-flex'} ,marginRight: '10px!important', fontSize: '0.9rem', color: colorMap.white, textTransform: 'capitalize' }}
