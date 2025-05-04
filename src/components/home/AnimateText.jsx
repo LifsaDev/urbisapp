@@ -61,7 +61,7 @@ const AnimatedText = ({ text, duration = 1000, delay = 100 }) => {
 
   return (
     <AnimatedTypography ref={containerRef} component="div">
-      {text}
+      { text }
     </AnimatedTypography>
   );
 };
